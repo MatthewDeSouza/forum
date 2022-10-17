@@ -12,7 +12,7 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@EqualsAndHashCode(exclude = {"user", "thread", "edited", "content", "comments"})
+@EqualsAndHashCode(exclude = {"edited", "content", "user", "thread", "comments"})
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 public class Post {

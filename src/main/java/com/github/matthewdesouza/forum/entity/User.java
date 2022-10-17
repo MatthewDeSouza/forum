@@ -11,7 +11,7 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
-@EqualsAndHashCode(exclude = {"posts", "comments", "role"})
+@EqualsAndHashCode(exclude = {"password", "posts", "comments", "role"})
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 public class User {

@@ -7,7 +7,7 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @Setter
 @NoArgsConstructor
-@EqualsAndHashCode(exclude = {"user", "post"})
+@EqualsAndHashCode(exclude = {"content", "user", "post"})
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
 public class Comment {
