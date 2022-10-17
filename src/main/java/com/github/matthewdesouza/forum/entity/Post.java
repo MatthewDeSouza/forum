@@ -35,12 +35,12 @@ public class Post {
     @Column(name = "content", nullable = false)
     String content;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     User user;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     Thread thread;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     Set<Comment> comments;
 }

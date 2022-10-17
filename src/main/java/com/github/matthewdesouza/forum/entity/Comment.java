@@ -3,6 +3,9 @@ package com.github.matthewdesouza.forum.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -14,6 +17,10 @@ public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
+    @CreationTimestamp
+    @Column(name = "creation", nullable = false, updatable = false)
+    LocalDateTime creation;
 
     @Lob
     @Column(name = "content", nullable = false)

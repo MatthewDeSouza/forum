@@ -32,12 +32,12 @@ public class User {
     @Column(name = "password", nullable = false)
     String password;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     Set<Post> posts;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     Set<Comment> comments;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     Role role;
 }

@@ -20,6 +20,6 @@ public class Thread {
     @Column(name = "name", unique = true)
     String name;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     Set<Post> posts;
 }
