@@ -16,6 +16,7 @@ import java.util.Set;
 @Entity
 public class User {
     @Id
+    @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
@@ -33,9 +34,11 @@ public class User {
     String password;
 
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "post_id")
     Set<Post> posts;
 
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "comment_id")
     Set<Comment> comments;
 
     @ManyToOne(optional = false)

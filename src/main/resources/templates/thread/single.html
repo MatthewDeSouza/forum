@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Thread</title>
+</head>
+<body>
+<div class="thread-single-view">
+    <div th:each="thread: ${thread}">
+        <p th:text="${name}">Name</p>
+        <div th:each="post: ${thread.posts}">
+            <p th:text="${post.title}">Post Title</p>
+            <p th:text="|Comments: ${post.getComments().size()}|">Number of Comments</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

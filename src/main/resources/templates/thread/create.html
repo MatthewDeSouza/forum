@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Thread</title>
+</head>
+<body>
+<div class="thread-create">
+<form th:action="@{/threads}" th:object="${thread}" method="post">
+  <div class="thread-create-form">
+    <label>
+      <input
+              type="text"
+              name="name"
+              th:field="*{name}"
+              placeholder="Enter Thread Name:"
+      />
+    </label>
+  </div>
+</form>
+</div>
+</body>
+</html>

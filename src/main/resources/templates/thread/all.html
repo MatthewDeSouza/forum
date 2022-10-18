@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Threads</title>
+</head>
+<body>
+<div class="thread-all-view">
+    <div th:each="thread: ${threads}">
+        <a th:href="@{/threads/{name}(name=${thread.name})}">
+            <p th:text="${thread.name}">Thread</p>
+            <p th:text="|Posts: ${thread.posts.size()}|">Posts</p>
+        </a>
+    </div>
+</div>
+</body>
+</html>

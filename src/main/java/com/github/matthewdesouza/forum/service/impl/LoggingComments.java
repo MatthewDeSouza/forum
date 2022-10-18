@@ -1,4 +1,4 @@
-package com.github.matthewdesouza.forum.service;
+package com.github.matthewdesouza.forum.service.impl;
 
 import org.slf4j.Logger;
 

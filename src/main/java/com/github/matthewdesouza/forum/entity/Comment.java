@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 @Entity
 public class Comment {
     @Id
+    @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
@@ -27,8 +28,10 @@ public class Comment {
     String content;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     User user;
 
     @ManyToOne
+    @JoinColumn(name = "post_id")
     Post post;
 }
